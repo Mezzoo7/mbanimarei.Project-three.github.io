@@ -1,0 +1,45 @@
+/* resume.css */
+/* RESUME page */
+
+body.resume {
+  background: linear-gradient(180deg, #fbfbfc 0%, #f0f5fb 100%);
+  color: #0f1720;
+  font-size: 0.98rem;
+}
+
+body.resume .container {
+  width: var(--max-fixed-width);
+  margin: 1.5rem auto;
+  padding: 1.25rem;
+  background: white;
+  border-radius: 0.6rem;
+  box-shadow: 0 0.5rem 1rem rgba(12,12,12,0.06);
+}
+
+body.resume h1 {
+  font-size: 1.6rem;
+  color: #0b4f78;
+  margin-bottom: 0.25rem;
+}
+
+body.resume p,
+body.resume ul {
+  font-size: 0.95rem;
+  color: #17202a;
+  margin-bottom: 0.6rem;
+}
+
+body.resume img {
+  width: 22rem;
+  max-width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* Mobile tweaks */
+@media (max-width: 680px) {
+  body.resume .container {
+    width: 94%;
+    box-shadow: none;
+    padding: 0.9rem;
+  }
+}
