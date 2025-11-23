@@ -1,0 +1,41 @@
+/* hobby.css */
+/* HOBBY page */
+
+body.hobby {
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+  font-size: 1rem;
+}
+
+body.hobby .container {
+  max-width: 72%;
+  margin: 1.25rem auto;
+  padding: 1rem;
+  border-left: 0.4rem solid var(--accent);
+  border-radius: 0.35rem;
+  background: rgba(255,255,255,0.9);
+}
+
+body.hobby h1 {
+  color: #0a4f7a;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+body.hobby p {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+body.hobby video {
+  width: 28rem;
+  max-width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* Mobile tweaks */
+@media (max-width: 680px) {
+  body.hobby .container {
+    width: 92%;
+    padding: 0.9rem;
+  }
+}
