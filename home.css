@@ -1,33 +1,103 @@
-body.home {
-  font-size: 1rem;
-  background-image: linear-gradient(180deg, #ffffff 0%, #f6fbff 60%);
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* Shared root variables */
+:root {
+  font-size: 16px;
+  --accent: #0b6fb3;
+  --muted: #666;
+  --card-bg: rgba(255,255,255,0.03);
+  --max-fixed-width: 800px;
 }
 
-body.home .container {
+/* Remove list-style once for all navs */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Base body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #111;
+  background: linear-gradient(180deg, #ffffff 0%, #f6fbff 60%);
+}
+
+/* Top navigation – identical across pages */
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0.25rem 0.5rem rgba(10,10,10,0.04);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 0.75rem 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+nav a:hover,
+nav a:focus {
+  background: var(--card-bg);
+  outline: none;
+}
+
+/* Home container (fluid layout) */
+.container {
+  width: 90%;
+  margin: 1.25rem auto;
+  padding: 1.25rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  max-width: 90%;
-  padding: 1.25rem;
   border-radius: 0.5rem;
 }
 
-body.home h1 {
-  color: var(--accent);
+/* Home typography */
+h1 {
   font-size: 2.25rem;
+  color: var(--accent);
   margin-top: 0.25rem;
 }
 
-body.home ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-  font-size: 0.98rem;
-  padding-left: 0;
+p {
+  font-size: 1rem;
 }
 
-body.home img {
+/* Home image */
+img {
   width: 22rem;
   max-width: 100%;
-  margin-top: 0.5rem;
+  border-radius: 0.35rem;
+}
+
+/* Media query */
+@media (max-width: 680px) {
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
 }
