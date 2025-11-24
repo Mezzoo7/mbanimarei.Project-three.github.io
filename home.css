@@ -91,13 +91,40 @@ img {
   border-radius: 0.35rem;
 }
 
-/* Media query */
-@media (max-width: 680px) {
-  nav ul {
-    gap: 0.5rem;
+
+/* ----------------------------- */
+/* REQUIRED RESPONSIVE QUERIES  */
+/* ----------------------------- */
+
+/* Small tablets and larger (min-width 480px) */
+@media (min-width: 30rem) {
+  .container {
+    width: 85%;
+    gap: 1.5rem;
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
+  }
+
+  nav ul {
+    gap: 1.75rem;
+  }
+}
+
+/* Tablets + desktops (min-width 768px) */
+@media (min-width: 48rem) {
+  body {
+    background: linear-gradient(180deg, #ffffff 0%, #eef6ff 60%);
+  }
+
+  .container {
+    max-width: var(--max-fixed-width);
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+
+  img {
+    width: 26rem;
   }
 }
