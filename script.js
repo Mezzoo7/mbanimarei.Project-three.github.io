@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (questionBtn) {
     questionBtn.addEventListener("click", () => {
-      alert("If you have questions, contact me at:\nmoath@example.com");
+      alert("If you have questions, contact me at:\neng.moathb@gmail.com");
     });
   }
 });
