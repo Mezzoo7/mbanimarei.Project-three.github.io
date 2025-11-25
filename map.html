@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <title>Google Map</title>
 
-  <!-- Shared and page CSS -->
   <link rel="stylesheet" href="shared.css">
   <link rel="stylesheet" href="map.css">
 
-  <!-- JavaScript file (will create next) -->
+  <!-- Your JS file -->
   <script src="script.js" defer></script>
 
   <!-- Google Maps API -->
@@ -20,7 +19,6 @@
 
 <body class="map-page">
 
-  <!-- Navigation (same on every page) -->
   <nav>
     <ul>
       <li><a href="index.html">index.html</a></li>
@@ -32,32 +30,11 @@
 
   <div class="map-container">
     <h1>My Google Map</h1>
-
     <p>This page displays my custom Google Map with three added features.</p>
 
-    <!-- Map element -->
     <div id="map"></div>
 
-    <!-- Button for alert -->
     <button id="questionBtn">Questions?</button>
-
-    // Wait until the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", () => {
-
-  // Questions button alert
-  const questionBtn = document.getElementById("questionBtn");
-  if (questionBtn) {
-    questionBtn.addEventListener("click", () => {
-      alert("If you have questions, contact me at:\nmoath@example.com");
-    });
-  }
-
-  // Initialize Google Map if on map page
-  if (typeof initMap === "function") {
-    initMap();
-  }
-});
-
   </div>
 
 </body>
